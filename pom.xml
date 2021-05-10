@@ -3,7 +3,11 @@
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>co.aurasphere</groupId>
+<<<<<<< HEAD
 	<artifactId>gomorra-sql</artifactId>
+=======
+	<artifactId>balente-sql</artifactId>
+>>>>>>> master
 	<version>1.0.0</version>
 	
 	<properties>
@@ -52,7 +56,7 @@
 							<archive>
 								<manifest>
 									<mainClass>
-										co.aurasphere.gomorrasql.GomorraSqlShell
+										it.linkalab.balentesql.BalenteSqlShell
 									</mainClass>
 								</manifest>
 							</archive>

@@ -1,0 +1,2 @@
+- MSCK REPAIR -> A su male su remediu
+- Ma poitta no ti ndi andasa a cagai?
