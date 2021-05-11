@@ -1,2 +1,3 @@
 - MSCK REPAIR -> A su male su remediu
-- Ma poitta no ti ndi andasa a cagai?
+- Errori: Ma poitta no ti ndi andasa a cagai?
+- INNER JOIN -> Abi coddas?
