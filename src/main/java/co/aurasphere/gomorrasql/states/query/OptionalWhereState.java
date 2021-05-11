@@ -1,17 +1,17 @@
-package co.aurasphere.gomorrasql.states.query;
+package it.linkalab.balentesql.states.query;
 
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
-import co.aurasphere.gomorrasql.Keywords;
-import co.aurasphere.gomorrasql.model.CaggiaFaException;
-import co.aurasphere.gomorrasql.model.QueryInfo;
-import co.aurasphere.gomorrasql.model.QueryInfo.QueryType;
-import co.aurasphere.gomorrasql.states.AbstractState;
-import co.aurasphere.gomorrasql.states.AnyTokenConsumerState;
-import co.aurasphere.gomorrasql.states.GreedyMatchKeywordState;
-import co.aurasphere.gomorrasql.states.where.WhereFieldState;
+import it.linkalab.balentesql.Keywords;
+import it.linkalab.balentesql.model.CaggiaFaException;
+import it.linkalab.balentesql.model.QueryInfo;
+import it.linkalab.balentesql.model.QueryInfo.QueryType;
+import it.linkalab.balentesql.states.AbstractState;
+import it.linkalab.balentesql.states.AnyTokenConsumerState;
+import it.linkalab.balentesql.states.GreedyMatchKeywordState;
+import it.linkalab.balentesql.states.where.WhereFieldState;
 
 /**
  * State that allows for an optional WHERE clause, JOIN clause (only when the

@@ -1,14 +1,14 @@
-package co.aurasphere.gomorrasql.model;
+package it.linkalab.balentesql.model;
 
 import java.sql.ResultSet;
 
 /**
- * Wrapper around JDBC query results, used by GomorraSQL.
+ * Wrapper around JDBC query results, used by BalenteSql.
  * 
  * @author Donato Rimenti
  *
  */
-public class GomorraSqlQueryResult {
+public class BalenteSqlQueryResult {
 	
 	private Integer affectedRows;
 	

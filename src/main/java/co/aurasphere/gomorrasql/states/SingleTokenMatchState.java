@@ -1,9 +1,9 @@
-package co.aurasphere.gomorrasql.states;
+package it.linkalab.balentesql.states;
 
 import java.util.function.Function;
 
-import co.aurasphere.gomorrasql.model.CaggiaFaException;
-import co.aurasphere.gomorrasql.model.QueryInfo;
+import it.linkalab.balentesql.model.CaggiaFaException;
+import it.linkalab.balentesql.model.QueryInfo;
 
 /**
  * States that proceeds if a specific token is matched exactly.

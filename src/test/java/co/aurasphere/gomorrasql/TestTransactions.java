@@ -1,4 +1,4 @@
-package co.aurasphere.gomorrasql;
+package it.linkalab.balentesql;
 
 import java.sql.Connection;
 import java.sql.ResultSet;
@@ -9,7 +9,7 @@ import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
 
-import co.aurasphere.gomorrasql.model.GomorraSqlQueryResult;
+import it.linkalab.balentesql.model.BalenteSqlQueryResult;
 
 public class TestTransactions {
 
@@ -27,11 +27,11 @@ public class TestTransactions {
 
 	@Test
 	public void testTransactionRollback() throws SQLException {
-		GomorraSqlInterpreter gsi = new GomorraSqlInterpreter(connection);
-		gsi.execute("ua uagliò");
+		BalenteSqlInterpreter gsi = new BalenteSqlInterpreter(connection);
+		gsi.execute("ua uagliï¿½");
 		gsi.execute("nzipp 'ngoppa city chist 6, 'RHO'");
-		GomorraSqlQueryResult result = gsi
-				.execute("ripigliammo tutto chillo ch'era 'o nuostro mmiez 'a city arò city_id = 6");
+		BalenteSqlQueryResult result = gsi
+				.execute("ripigliammo tutto chillo ch'era 'o nuostro mmiez 'a city arï¿½ city_id = 6");
 		ResultSet resultSet = result.getResultSet();
 		int expectedCount = 1;
 		while (resultSet.next()) {
@@ -40,7 +40,7 @@ public class TestTransactions {
 		Assert.assertEquals(expectedCount, 2);
 
 		gsi.execute("sfaccimm");
-		result = gsi.execute("ripigliammo tutto chillo ch'era 'o nuostro mmiez 'a city arò city_id = 6");
+		result = gsi.execute("ripigliammo tutto chillo ch'era 'o nuostro mmiez 'a city arï¿½ city_id = 6");
 		resultSet = result.getResultSet();
 		expectedCount = 1;
 		while (resultSet.next()) {
@@ -51,11 +51,11 @@ public class TestTransactions {
 	
 	@Test
 	public void testTransactionCommit() throws SQLException {
-		GomorraSqlInterpreter gsi = new GomorraSqlInterpreter(connection);
-		gsi.execute("ua uagliò");
+		BalenteSqlInterpreter gsi = new BalenteSqlInterpreter(connection);
+		gsi.execute("ua uagliï¿½");
 		gsi.execute("nzipp 'ngoppa city chist 6, 'RHO'");
-		GomorraSqlQueryResult result = gsi
-				.execute("ripigliammo tutto chillo ch'era 'o nuostro mmiez 'a city arò city_id = 6");
+		BalenteSqlQueryResult result = gsi
+				.execute("ripigliammo tutto chillo ch'era 'o nuostro mmiez 'a city arï¿½ city_id = 6");
 		ResultSet resultSet = result.getResultSet();
 		int expectedCount = 1;
 		while (resultSet.next()) {
@@ -64,7 +64,7 @@ public class TestTransactions {
 		Assert.assertEquals(expectedCount, 2);
 
 		gsi.execute("iamme bello ia'");
-		result = gsi.execute("ripigliammo tutto chillo ch'era 'o nuostro mmiez 'a city arò city_id = 6");
+		result = gsi.execute("ripigliammo tutto chillo ch'era 'o nuostro mmiez 'a city arï¿½ city_id = 6");
 		resultSet = result.getResultSet();
 		expectedCount = 1;
 		while (resultSet.next()) {

@@ -1,11 +1,11 @@
-package co.aurasphere.gomorrasql.states;
+package it.linkalab.balentesql.states;
 
 import java.util.Arrays;
 import java.util.List;
 import java.util.function.Function;
 
-import co.aurasphere.gomorrasql.model.CaggiaFaException;
-import co.aurasphere.gomorrasql.model.QueryInfo;
+import it.linkalab.balentesql.model.CaggiaFaException;
+import it.linkalab.balentesql.model.QueryInfo;
 
 /**
  * State that parses a list of values, separed by a comma. It stops when there's

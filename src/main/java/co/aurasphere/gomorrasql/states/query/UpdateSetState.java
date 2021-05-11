@@ -1,14 +1,14 @@
-package co.aurasphere.gomorrasql.states.query;
+package it.linkalab.balentesql.states.query;
 
 import java.util.Arrays;
 
-import co.aurasphere.gomorrasql.Keywords;
-import co.aurasphere.gomorrasql.model.CaggiaFaException;
-import co.aurasphere.gomorrasql.model.QueryInfo;
-import co.aurasphere.gomorrasql.states.AbstractState;
-import co.aurasphere.gomorrasql.states.AnyTokenConsumerState;
-import co.aurasphere.gomorrasql.states.SingleTokenMatchState;
-import co.aurasphere.gomorrasql.states.where.WhereFieldState;
+import it.linkalab.balentesql.Keywords;
+import it.linkalab.balentesql.model.CaggiaFaException;
+import it.linkalab.balentesql.model.QueryInfo;
+import it.linkalab.balentesql.states.AbstractState;
+import it.linkalab.balentesql.states.AnyTokenConsumerState;
+import it.linkalab.balentesql.states.SingleTokenMatchState;
+import it.linkalab.balentesql.states.where.WhereFieldState;
 
 /**
  * State for an update when the first value is set. Allows to continue setting

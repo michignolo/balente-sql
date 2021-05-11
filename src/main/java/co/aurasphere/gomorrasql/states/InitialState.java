@@ -1,14 +1,14 @@
-package co.aurasphere.gomorrasql.states;
+package it.linkalab.balentesql.states;
 
 import java.util.Arrays;
 
-import co.aurasphere.gomorrasql.Keywords;
-import co.aurasphere.gomorrasql.model.CaggiaFaException;
-import co.aurasphere.gomorrasql.model.QueryInfo;
-import co.aurasphere.gomorrasql.model.QueryInfo.QueryType;
-import co.aurasphere.gomorrasql.states.query.OptionalWhereState;
-import co.aurasphere.gomorrasql.states.query.SelectColumnsState;
-import co.aurasphere.gomorrasql.states.query.UpdateSetState;
+import it.linkalab.balentesql.Keywords;
+import it.linkalab.balentesql.model.CaggiaFaException;
+import it.linkalab.balentesql.model.QueryInfo;
+import it.linkalab.balentesql.model.QueryInfo.QueryType;
+import it.linkalab.balentesql.states.query.OptionalWhereState;
+import it.linkalab.balentesql.states.query.SelectColumnsState;
+import it.linkalab.balentesql.states.query.UpdateSetState;
 
 /**
  * First state when parsing a query. It switches through the various possible

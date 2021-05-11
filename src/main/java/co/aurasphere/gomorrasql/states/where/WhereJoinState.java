@@ -1,11 +1,11 @@
-package co.aurasphere.gomorrasql.states.where;
+package it.linkalab.balentesql.states.where;
 
 import java.util.Arrays;
 
-import co.aurasphere.gomorrasql.Keywords;
-import co.aurasphere.gomorrasql.model.CaggiaFaException;
-import co.aurasphere.gomorrasql.model.QueryInfo;
-import co.aurasphere.gomorrasql.states.AbstractState;
+import it.linkalab.balentesql.Keywords;
+import it.linkalab.balentesql.model.CaggiaFaException;
+import it.linkalab.balentesql.model.QueryInfo;
+import it.linkalab.balentesql.states.AbstractState;
 
 /**
  * State for joining two WHERE subclause using an AND or OR operator, or

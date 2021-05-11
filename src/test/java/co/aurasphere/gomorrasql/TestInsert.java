@@ -1,4 +1,4 @@
-package co.aurasphere.gomorrasql;
+package it.linkalab.balentesql;
 
 import java.sql.Connection;
 import java.sql.ResultSet;
@@ -9,7 +9,7 @@ import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
 
-import co.aurasphere.gomorrasql.model.GomorraSqlQueryResult;
+import it.linkalab.balentesql.model.BalenteSqlQueryResult;
 
 public class TestInsert {
 
@@ -27,11 +27,11 @@ public class TestInsert {
 	
 	@Test
 	public void testInsert() throws SQLException {
-		GomorraSqlInterpreter gsi = new GomorraSqlInterpreter(connection);
-		GomorraSqlQueryResult result = gsi.execute("nzipp 'ngoppa city chist 6, 'RHO'");
+		BalenteSqlInterpreter gsi = new BalenteSqlInterpreter(connection);
+		BalenteSqlQueryResult result = gsi.execute("nzipp 'ngoppa city chist 6, 'RHO'");
 		Assert.assertEquals((Integer) 1, result.getAffectedRows());
 		
-		result = gsi.execute("ripigliammo tutto chillo ch'era 'o nuostro mmiez 'a city arò city_id = 6 e city_name = 'RHO'");
+		result = gsi.execute("ripigliammo tutto chillo ch'era 'o nuostro mmiez 'a city arï¿½ city_id = 6 e city_name = 'RHO'");
 		ResultSet resultSet = result.getResultSet();
 		int counter = 0;
 		while (resultSet.next()) {
@@ -42,11 +42,11 @@ public class TestInsert {
 	
 	@Test
 	public void testInsertWithColumnNames() throws SQLException {
-		GomorraSqlInterpreter gsi = new GomorraSqlInterpreter(connection);
-		GomorraSqlQueryResult result = gsi.execute("nzipp 'ngoppa city city_name chist 'RHO'");
+		BalenteSqlInterpreter gsi = new BalenteSqlInterpreter(connection);
+		BalenteSqlQueryResult result = gsi.execute("nzipp 'ngoppa city city_name chist 'RHO'");
 		Assert.assertEquals((Integer) 1, result.getAffectedRows());
 		
-		result = gsi.execute("ripigliammo tutto chillo ch'era 'o nuostro mmiez 'a city arò city_id è nisciun e city_name = 'RHO'");
+		result = gsi.execute("ripigliammo tutto chillo ch'era 'o nuostro mmiez 'a city arï¿½ city_id ï¿½ nisciun e city_name = 'RHO'");
 		ResultSet resultSet = result.getResultSet();
 		int counter = 0;
 		while (resultSet.next()) {

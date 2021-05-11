@@ -1,4 +1,4 @@
-package co.aurasphere.gomorrasql;
+package it.linkalab.balentesql;
 
 import java.sql.Connection;
 import java.sql.DriverManager;

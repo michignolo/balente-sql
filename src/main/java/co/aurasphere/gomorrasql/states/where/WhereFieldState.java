@@ -1,9 +1,9 @@
-package co.aurasphere.gomorrasql.states.where;
+package it.linkalab.balentesql.states.where;
 
-import co.aurasphere.gomorrasql.model.CaggiaFaException;
-import co.aurasphere.gomorrasql.model.QueryInfo;
-import co.aurasphere.gomorrasql.model.WhereCondition;
-import co.aurasphere.gomorrasql.states.AbstractState;
+import it.linkalab.balentesql.model.CaggiaFaException;
+import it.linkalab.balentesql.model.QueryInfo;
+import it.linkalab.balentesql.model.WhereCondition;
+import it.linkalab.balentesql.states.AbstractState;
 
 /**
  * State for creating a new WHERE subclause in the format "field operator

@@ -1,4 +1,4 @@
-package co.aurasphere.gomorrasql;
+package it.linkalab.balentesql;
 
 import java.sql.Connection;
 import java.sql.SQLException;
@@ -8,9 +8,9 @@ import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
 
-import co.aurasphere.gomorrasql.model.CaggiaFaException;
+import it.linkalab.balentesql.model.CaggiaFaException;
 
-public class TestGomorraSqlInterpreter {
+public class TestBalenteSqlInterpreter {
 
 	private Connection connection;
 
@@ -26,14 +26,14 @@ public class TestGomorraSqlInterpreter {
 
 	@Test(expected = CaggiaFaException.class)
 	public void testWrongDataTypeInsert() throws SQLException {
-		GomorraSqlInterpreter gsi = new GomorraSqlInterpreter(connection);
+		BalenteSqlInterpreter gsi = new BalenteSqlInterpreter(connection);
 		gsi.execute("nzipp 'ngoppa city chist 'RHO', 7");
 	}
 
 	@Test
 	public void testSqlConversion() throws SQLException {
-		String gomorraQuery = "nzipp 'ngoppa city chist 6, 8";
-		String sqlQuery = GomorraSqlInterpreter.toSqlQuery(gomorraQuery);
+		String balenteQuery = "nzipp 'ngoppa city chist 6, 8";
+		String sqlQuery = BalenteSqlInterpreter.toSqlQuery(balenteQuery);
 		Assert.assertEquals("INSERT INTO city VALUES ( 6, 8 )", sqlQuery);
 	}
 

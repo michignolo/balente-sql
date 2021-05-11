@@ -1,4 +1,4 @@
-package co.aurasphere.gomorrasql;
+package it.linkalab.balentesql;
 
 import java.sql.Connection;
 import java.sql.ResultSet;
@@ -8,35 +8,35 @@ import java.util.List;
 import java.util.StringTokenizer;
 import java.util.stream.Collectors;
 
-import co.aurasphere.gomorrasql.model.CaggiaFaException;
-import co.aurasphere.gomorrasql.model.GomorraSqlQueryResult;
-import co.aurasphere.gomorrasql.model.QueryInfo;
-import co.aurasphere.gomorrasql.model.WhereCondition;
-import co.aurasphere.gomorrasql.states.AbstractState;
-import co.aurasphere.gomorrasql.states.InitialState;
+import it.linkalab.balentesql.model.CaggiaFaException;
+import it.linkalab.balentesql.model.BalenteSqlQueryResult;
+import it.linkalab.balentesql.model.QueryInfo;
+import it.linkalab.balentesql.model.WhereCondition;
+import it.linkalab.balentesql.states.AbstractState;
+import it.linkalab.balentesql.states.InitialState;
 
 /**
- * Interpreter for the GomorraSQL.
+ * Interpreter for the BalenteSql.
  * 
  * @author Donato Rimenti
  *
  */
-public class GomorraSqlInterpreter {
+public class BalenteSqlInterpreter {
 
 	private Connection connection;
 
-	public GomorraSqlInterpreter(Connection connection) {
+	public BalenteSqlInterpreter(Connection connection) {
 		this.connection = connection;
 	}
 
 	/**
-	 * Converts a GomorraSQL query into a standard SQL query.
+	 * Converts a BalenteSql query into a standard SQL query.
 	 * 
-	 * @param gomorraQuery the query to convert
+	 * @param balenteQuery the query to convert
 	 * @return an equivalent SQL query
 	 */
-	public static String toSqlQuery(String gomorraQuery) {
-		QueryInfo info = parseQuery(gomorraQuery);
+	public static String toSqlQuery(String balenteQuery) {
+		QueryInfo info = parseQuery(balenteQuery);
 		return buildSqlQuery(info);
 	}
 
@@ -142,15 +142,15 @@ public class GomorraSqlInterpreter {
 	}
 
 	/**
-	 * Executes the given GomorraSQL query in the connected database.
+	 * Executes the given BalenteSql query in the connected database.
 	 * 
-	 * @param gomorraSqlQuery the query to execute
+	 * @param balenteSqlQuery the query to execute
 	 * @return the result of the query
 	 */
-	public GomorraSqlQueryResult execute(String gomorraSqlQuery) {
-		QueryInfo queryInfo = parseQuery(gomorraSqlQuery);
+	public BalenteSqlQueryResult execute(String balenteSqlQuery) {
+		QueryInfo queryInfo = parseQuery(balenteSqlQuery);
 		String sqlQuery = buildSqlQuery(queryInfo);
-		GomorraSqlQueryResult result = new GomorraSqlQueryResult();
+		BalenteSqlQueryResult result = new BalenteSqlQueryResult();
 
 		// Executes the query
 		try {

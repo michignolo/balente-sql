@@ -1,4 +1,4 @@
-package co.aurasphere.gomorrasql;
+package it.linkalab.balentesql;
 
 import java.sql.Connection;
 import java.sql.ResultSet;
@@ -9,7 +9,7 @@ import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
 
-import co.aurasphere.gomorrasql.model.GomorraSqlQueryResult;
+import it.linkalab.balentesql.model.BalenteSqlQueryResult;
 
 public class TestSelect {
 
@@ -29,8 +29,8 @@ public class TestSelect {
 
 	@Test
 	public void testSelectAsterisk() throws SQLException {
-		GomorraSqlInterpreter gsi = new GomorraSqlInterpreter(connection);
-		GomorraSqlQueryResult result = gsi.execute("ripigliammo tutto chillo ch'era 'o nuostro mmiez 'a city");
+		BalenteSqlInterpreter gsi = new BalenteSqlInterpreter(connection);
+		BalenteSqlQueryResult result = gsi.execute("ripigliammo tutto chillo ch'era 'o nuostro mmiez 'a city");
 		ResultSet resultSet = result.getResultSet();
 		int expectedId = 1;
 		while (resultSet.next()) {
@@ -45,9 +45,9 @@ public class TestSelect {
 
 	@Test
 	public void testSelectWhere() throws SQLException {
-		GomorraSqlInterpreter gsi = new GomorraSqlInterpreter(connection);
-		GomorraSqlQueryResult result = gsi
-				.execute("ripigliammo tutto chillo ch'era 'o nuostro mmiez 'a city arò city_id < 3");
+		BalenteSqlInterpreter gsi = new BalenteSqlInterpreter(connection);
+		BalenteSqlQueryResult result = gsi
+				.execute("ripigliammo tutto chillo ch'era 'o nuostro mmiez 'a city arï¿½ city_id < 3");
 		ResultSet resultSet = result.getResultSet();
 		int expectedId = 1;
 		while (resultSet.next()) {
@@ -62,9 +62,9 @@ public class TestSelect {
 
 	@Test
 	public void testSelectWhereAnd() throws SQLException {
-		GomorraSqlInterpreter gsi = new GomorraSqlInterpreter(connection);
-		GomorraSqlQueryResult result = gsi
-				.execute("ripigliammo first_name, last_name mmiez 'a user arò address è nisciun e fess è true");
+		BalenteSqlInterpreter gsi = new BalenteSqlInterpreter(connection);
+		BalenteSqlQueryResult result = gsi
+				.execute("ripigliammo first_name, last_name mmiez 'a user arï¿½ address ï¿½ nisciun e fess ï¿½ true");
 		ResultSet resultSet = result.getResultSet();
 		int counter = 1;
 		while (resultSet.next()) {
@@ -79,9 +79,9 @@ public class TestSelect {
 
 	@Test
 	public void testSelectWhereOr() throws SQLException {
-		GomorraSqlInterpreter gsi = new GomorraSqlInterpreter(connection);
-		GomorraSqlQueryResult result = gsi
-				.execute("ripigliammo first_name, last_name mmiez 'a user arò address è nisciun o fess è true");
+		BalenteSqlInterpreter gsi = new BalenteSqlInterpreter(connection);
+		BalenteSqlQueryResult result = gsi
+				.execute("ripigliammo first_name, last_name mmiez 'a user arï¿½ address ï¿½ nisciun o fess ï¿½ true");
 		ResultSet resultSet = result.getResultSet();
 		int counter = 1;
 		String[] names = { "PINCO", "JOHN" };
@@ -98,9 +98,9 @@ public class TestSelect {
 
 	@Test
 	public void testSelectJoin() throws SQLException {
-		GomorraSqlInterpreter gsi = new GomorraSqlInterpreter(connection);
-		GomorraSqlQueryResult result = gsi.execute(
-				"ripigliammo first_name, city_name mmiez 'a user pesc e pesc city arò fess è true e fk_city_id = city_id");
+		BalenteSqlInterpreter gsi = new BalenteSqlInterpreter(connection);
+		BalenteSqlQueryResult result = gsi.execute(
+				"ripigliammo first_name, city_name mmiez 'a user pesc e pesc city arï¿½ fess ï¿½ true e fk_city_id = city_id");
 		ResultSet resultSet = result.getResultSet();
 		int counter = 1;
 		String[] names = { "PINCO", "JOHN" };
@@ -117,8 +117,8 @@ public class TestSelect {
 
 	@Test
 	public void testSelectWhereIsNot() throws SQLException {
-		GomorraSqlInterpreter gsi = new GomorraSqlInterpreter(connection);
-		GomorraSqlQueryResult result = gsi.execute("ripigliammo first_name mmiez 'a user arò address nun è nisciun");
+		BalenteSqlInterpreter gsi = new BalenteSqlInterpreter(connection);
+		BalenteSqlQueryResult result = gsi.execute("ripigliammo first_name mmiez 'a user arï¿½ address nun ï¿½ nisciun");
 		ResultSet resultSet = result.getResultSet();
 		int counter = 1;
 		String[] names = { "PINCO", "PAOLINO", "FRED" };

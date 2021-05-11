@@ -1,9 +1,9 @@
-package co.aurasphere.gomorrasql.model;
+package it.linkalab.balentesql.model;
 
 import java.util.List;
 
 /**
- * Exception thrown by GomorraSQL when an error occurs during query
+ * Exception thrown by BalenteSql when an error occurs during query
  * parsing/execution.
  * 
  * @author Donato Rimenti

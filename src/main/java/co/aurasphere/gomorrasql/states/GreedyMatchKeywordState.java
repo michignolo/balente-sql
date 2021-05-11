@@ -1,9 +1,9 @@
-package co.aurasphere.gomorrasql.states;
+package it.linkalab.balentesql.states;
 
 import java.util.function.Function;
 
-import co.aurasphere.gomorrasql.model.CaggiaFaException;
-import co.aurasphere.gomorrasql.model.QueryInfo;
+import it.linkalab.balentesql.model.CaggiaFaException;
+import it.linkalab.balentesql.model.QueryInfo;
 
 /**
  * State that proceeds to the next one if all the given keywords are matched,

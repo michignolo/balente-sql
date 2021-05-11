@@ -1,7 +1,7 @@
-package co.aurasphere.gomorrasql.states;
+package it.linkalab.balentesql.states;
 
-import co.aurasphere.gomorrasql.model.CaggiaFaException;
-import co.aurasphere.gomorrasql.model.QueryInfo;
+import it.linkalab.balentesql.model.CaggiaFaException;
+import it.linkalab.balentesql.model.QueryInfo;
 
 /**
  * State that represents the end of a query.

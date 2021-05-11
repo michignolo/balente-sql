@@ -1,4 +1,4 @@
-package co.aurasphere.gomorrasql.model;
+package it.linkalab.balentesql.model;
 
 import java.util.ArrayList;
 import java.util.List;

@@ -1,4 +1,4 @@
-package co.aurasphere.gomorrasql;
+package it.linkalab.balentesql;
 
 import java.sql.Connection;
 import java.sql.ResultSet;
@@ -9,7 +9,7 @@ import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
 
-import co.aurasphere.gomorrasql.model.GomorraSqlQueryResult;
+import it.linkalab.balentesql.model.BalenteSqlQueryResult;
 
 public class TestUpdate {
 
@@ -27,8 +27,8 @@ public class TestUpdate {
 	
 	@Test
 	public void testUpdateAll() throws SQLException {
-		GomorraSqlInterpreter gsi = new GomorraSqlInterpreter(connection);
-		GomorraSqlQueryResult result = gsi.execute("rifacimm city accunza city_name accussì 'NAPULI', city_id accussì 10");
+		BalenteSqlInterpreter gsi = new BalenteSqlInterpreter(connection);
+		BalenteSqlQueryResult result = gsi.execute("rifacimm city accunza city_name accussï¿½ 'NAPULI', city_id accussï¿½ 10");
 		Assert.assertEquals((Integer) 4, result.getAffectedRows());
 		
 		result = gsi.execute("ripigliammo tutto chillo ch'era 'o nuostro mmiez 'a city");
@@ -46,11 +46,11 @@ public class TestUpdate {
 	
 	@Test
 	public void testUpdateWhere() throws SQLException {
-		GomorraSqlInterpreter gsi = new GomorraSqlInterpreter(connection);
-		GomorraSqlQueryResult result = gsi.execute("rifacimm city accunza city_name accussì 'NAPULI', city_id accussì 10 arò city_id = 1");
+		BalenteSqlInterpreter gsi = new BalenteSqlInterpreter(connection);
+		BalenteSqlQueryResult result = gsi.execute("rifacimm city accunza city_name accussï¿½ 'NAPULI', city_id accussï¿½ 10 arï¿½ city_id = 1");
 		Assert.assertEquals((Integer) 1, result.getAffectedRows());
 		
-		result = gsi.execute("ripigliammo tutto chillo ch'era 'o nuostro mmiez 'a city arò city_id = 10");
+		result = gsi.execute("ripigliammo tutto chillo ch'era 'o nuostro mmiez 'a city arï¿½ city_id = 10");
 		ResultSet resultSet = result.getResultSet();
 		int counter = 0;
 		while (resultSet.next()) {

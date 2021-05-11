@@ -1,10 +1,10 @@
-package co.aurasphere.gomorrasql.states;
+package it.linkalab.balentesql.states;
 
 import java.util.function.Consumer;
 import java.util.function.Function;
 
-import co.aurasphere.gomorrasql.model.CaggiaFaException;
-import co.aurasphere.gomorrasql.model.QueryInfo;
+import it.linkalab.balentesql.model.CaggiaFaException;
+import it.linkalab.balentesql.model.QueryInfo;
 
 /**
  * Consumes any token applying the given function and then moves to the next

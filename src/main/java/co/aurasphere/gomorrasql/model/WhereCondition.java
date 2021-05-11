@@ -1,7 +1,7 @@
-package co.aurasphere.gomorrasql.model;
+package it.linkalab.balentesql.model;
 
 /**
- * Represents a statement in a where condition of a GomorraSQL query.
+ * Represents a statement in a where condition of a BalenteSql query.
  * 
  * @author Donato Rimenti
  *

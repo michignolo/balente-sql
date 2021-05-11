@@ -1,12 +1,12 @@
-package co.aurasphere.gomorrasql.states.query;
+package it.linkalab.balentesql.states.query;
 
-import co.aurasphere.gomorrasql.Keywords;
-import co.aurasphere.gomorrasql.model.CaggiaFaException;
-import co.aurasphere.gomorrasql.model.QueryInfo;
-import co.aurasphere.gomorrasql.states.AbstractState;
-import co.aurasphere.gomorrasql.states.AnyTokenConsumerState;
-import co.aurasphere.gomorrasql.states.CommaSeparedValuesState;
-import co.aurasphere.gomorrasql.states.GreedyMatchKeywordState;
+import it.linkalab.balentesql.Keywords;
+import it.linkalab.balentesql.model.CaggiaFaException;
+import it.linkalab.balentesql.model.QueryInfo;
+import it.linkalab.balentesql.states.AbstractState;
+import it.linkalab.balentesql.states.AnyTokenConsumerState;
+import it.linkalab.balentesql.states.CommaSeparedValuesState;
+import it.linkalab.balentesql.states.GreedyMatchKeywordState;
 
 /**
  * State that allows a select to switch between the * operator and the column

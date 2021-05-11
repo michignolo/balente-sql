@@ -1,4 +1,4 @@
-package co.aurasphere.gomorrasql;
+package it.linkalab.balentesql;
 
 import java.sql.Connection;
 import java.sql.ResultSet;
@@ -9,7 +9,7 @@ import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
 
-import co.aurasphere.gomorrasql.model.GomorraSqlQueryResult;
+import it.linkalab.balentesql.model.BalenteSqlQueryResult;
 
 public class TestDelete {
 
@@ -28,8 +28,8 @@ public class TestDelete {
 	
 	@Test
 	public void testDeleteAll() throws SQLException {
-		GomorraSqlInterpreter gsi = new GomorraSqlInterpreter(connection);
-		GomorraSqlQueryResult result = gsi.execute("facimm na' strage mmiez 'a city");
+		BalenteSqlInterpreter gsi = new BalenteSqlInterpreter(connection);
+		BalenteSqlQueryResult result = gsi.execute("facimm na' strage mmiez 'a city");
 		Assert.assertEquals((Integer) 4, result.getAffectedRows());
 		
 		result = gsi.execute("ripigliammo tutto chillo ch'era 'o nuostro mmiez 'a city");
@@ -43,8 +43,8 @@ public class TestDelete {
 	
 	@Test
 	public void testDeleteWithWhere() throws SQLException {
-		GomorraSqlInterpreter gsi = new GomorraSqlInterpreter(connection);
-		GomorraSqlQueryResult result = gsi.execute("facimm na' strage mmiez 'a city arò city_id >= 2");
+		BalenteSqlInterpreter gsi = new BalenteSqlInterpreter(connection);
+		BalenteSqlQueryResult result = gsi.execute("facimm na' strage mmiez 'a city arï¿½ city_id >= 2");
 		Assert.assertEquals((Integer) 3, result.getAffectedRows());
 		
 		result = gsi.execute("ripigliammo tutto chillo ch'era 'o nuostro mmiez 'a city");
